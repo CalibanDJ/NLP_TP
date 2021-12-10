@@ -1,0 +1,70 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - crypto_name
+  - ask_price
+  - ask_rank
+  - ask_change
+  - one_hour
+  - one_day
+  - seven_days
+  - affirm
+  - deny
+
+responses:
+
+  utter_greeting:
+  - text: "Hey! Which crypto do you want to explore?"
+
+  utter_default:
+  - text: "What crytocurrency do you want to explore?"
+
+  utter_ask_more:
+  - text: "Do you want to know something else ?"
+
+  utter_ask:
+  - text: "What do you want to know about it ? [Price/Rank/Change]"
+
+  utter_goodbye:
+  - text: "Bye"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_crypto_rank
+  - action_crypto_change
+  - action_crypto_price_usd
+  - action_crypto_get_id
+  - action_reset_slots
+  - action_crypto_change_with_details
+
+entities:
+  - crypto_e
+  - crypto_id
+  - crypto_change
+
+slots:
+  crypto:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: crypto_e
+  id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: crypto_id
+  change:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: crypto_change
+
+forms:
+  crypto_form:
+    required_slots:
+      - crypto

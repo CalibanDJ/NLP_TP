@@ -1,0 +1,24 @@
+version: "3.0"
+
+rules:
+
+- rule: Active crypto form
+  steps:
+    - intent: crypto_name
+    - action: crypto_form
+    - active_loop: crypto_form
+
+- rule: Submit crypto form
+  condition:
+    - active_loop: crypto_form
+  steps:
+    - action: crypto_form
+    - slot_was_set:
+        - requested_slot: crypto
+    - active_loop: null
+    - action: action_crypto_get_id
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

@@ -1,0 +1,59 @@
+version: "3.0"
+
+stories:
+
+- story: hello
+  steps:
+  - intent: greet
+  - action: utter_greeting
+
+- story: ask price
+  steps:
+  - intent: ask_price
+  - action: action_crypto_price_usd
+  - action: utter_ask_more
+
+- story: ask rank
+  steps:
+  - intent: ask_rank
+  - action: action_crypto_rank
+  - action: utter_ask_more
+
+- story: ask change
+  steps:
+  - intent: ask_change
+  - action: action_crypto_change
+
+- story: ask change 1h
+  steps:
+  - intent: one_hour
+  - action: action_crypto_change_with_details
+  - action: utter_ask_more
+
+- story: ask change 1d
+  steps:
+  - intent: one_day
+  - action: action_crypto_change_with_details
+  - action: utter_ask_more
+
+- story: ask change 7d
+  steps:
+  - intent: seven_days
+  - action: action_crypto_change_with_details
+  - action: utter_ask_more
+
+- story: ask more affirm
+  steps:
+  - action: utter_ask_more
+  - intent: affirm
+  - action: utter_ask
+
+- story: ask more deny
+  steps:
+  - action: utter_ask_more
+  - intent: deny
+  - action: action_reset_slots
+  - action: utter_default
+
+
+

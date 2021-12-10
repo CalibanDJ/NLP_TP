@@ -1,0 +1,135 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: crypto_name
+  examples: |
+    - My crypto is [btc](crypto_e)
+    - [coin](crypto_e)
+    - [btc](crypto_e)
+    - [bitcoin](crypto_e)
+    - [eth](crypto_e)
+    - [ethereum](crypto_e)
+    - It is [btc](crypto_e)
+
+- intent: ask_price
+  examples: |
+      - price
+      - how much ?
+      - $
+      - cost
+      - worth
+      - What about his price
+      - I choose price
+      - It's price
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+- intent: ask_rank
+  examples: |
+      - rank
+      - ranking
+      - position
+      - Who is the best ?
+      - bracket
+      - What is his rank ?
+      - place
+      - What about his rank
+      - I choose rank
+      - It's rank
+
+- intent: ask_change
+  examples: |
+      - change
+      - exchange
+      - fluctuation
+      - CAG
+      - equivalent
+      - What is his change ?
+      - What about his change
+      - I choose change
+      - It's change
+
+- intent: one_hour
+  examples: |
+      - [1](crypto_change)
+      - [1](crypto_change)h
+      - [1](crypto_change) hour
+      - [1](crypto_change) hours
+      - [1](crypto_change)hour
+      - [one](crypto_change)
+      - [one](crypto_change) hour
+      - [one](crypto_change) h
+      - [one](crypto_change) hours
+      - last [1](crypto_change)h
+
+
+- intent: one_day
+  examples: |
+      - [24](crypto_change)h
+      - [24](crypto_change) hours
+      - [24](crypto_change)
+      - [twenty-four](crypto_change)
+      - [twenty four](crypto_change)
+      - [twenty-four](crypto_change) hours
+      - [twenty four](crypto_change) hours
+      - [twenty-four](crypto_change) h
+      - [twenty four](crypto_change) h
+      - last [24](crypto_change)h
+
+- intent: seven_days
+  examples: |
+      - [7](crypto_change)d
+      - [7](crypto_change) days
+      - [seven](crypto_change) days
+      - [seven](crypto_change) d
+      - last [7](crypto_change)d
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+
